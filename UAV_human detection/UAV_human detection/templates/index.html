@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UAV Based Human Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+    <h1>UAV HUMAN DETECTION SYSTEM</h1>
+    <p>AI-based real-time aerial surveillance & reporting platform</p>
+</header>
+
+<!-- ===== MAIN LAYOUT ===== -->
+<div class="layout">
+
+    <!-- ===== CENTER CONTENT ===== -->
+    <div class="content">
+
+    <!-- Add this wrapper -->
+    <div class="image-frame">
+        <img src="{{ url_for('static', filename='a3.png') }}" class="hero-img">
+    </div>
+
+    <h2>Intelligent UAV Surveillance</h2>
+    <p>
+        This system uses AI and computer vision to detect human presence
+        from UAV footage, generate alerts, store snapshots,
+        and produce analytical reports for security and monitoring.
+    </p>
+
+    <a href="/live" class="start-btn">START LIVE FIELD</a>
+</div>
+
+    <!-- ===== RIGHT SIDE BLACK MENU ===== -->
+    <div class="side-menu">
+
+        <a href="/alerts" class="menu-btn">🚨 Alerts</a>
+
+        <a href="/snapshots" class="menu-btn">📸 Snapshots</a>
+
+        <a href="/report" class="menu-btn">📄 Report</a>
+
+        <a href="/map" class="menu-btn">🗺 Map</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

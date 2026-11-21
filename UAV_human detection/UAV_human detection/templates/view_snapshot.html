@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapshot View - UAV Human Detection</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            background: #0f172a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        .snapshot-container {
+            margin: 20px auto;
+            max-width: 1000px;
+        }
+
+        .snapshot-container img {
+            max-width: 100%;
+            max-height: 70vh;
+            height: auto;
+            border: 2px solid #475569;
+            border-radius: 10px;
+        }
+
+        .filename {
+            color: #cbd5e1;
+            margin-top: 15px;
+            overflow-wrap: anywhere;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .back-button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Snapshot View</h1>
+
+    <div class="snapshot-container">
+        <img
+            src="{{ url_for('snapshot_file', filename=filename) }}"
+            alt="Human Detection Snapshot"
+        >
+
+        <p class="filename">{{ filename }}</p>
+    </div>
+
+    <a href="{{ url_for('alerts') }}" class="back-button">
+        Back to Alerts
+    </a>
+</body>
+</html>

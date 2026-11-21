@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UAV Human Detection</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<h1>🚁 UAV Human Detection Surveillance System</h1>
+
+<div class="main">
+    <div class="left">
+        <img src="/video_feed" class="video">
+
+        <h3>Live Feed</h3>
+
+        {% if latest_snapshot %}
+        <h4>Latest Snapshot</h4>
+        <img src="/snapshots/{{ latest_snapshot }}" class="snapshot">
+        {% endif %}
+    </div>
+
+    <div class="right">
+        <a href="/">🔴 Live Feed</a>
+        <a href="/alerts">🔔 Alerts</a>
+        <a href="/snapshots">📸 Snapshots</a>
+        <a href="/report">📊 Report</a>
+    </div>
+</div>
+
+</body>
+</html>

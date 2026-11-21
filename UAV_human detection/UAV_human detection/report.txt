@@ -1,0 +1,3 @@
+UAV Human Detection Report
+
+Human detected in snapshot: snapshot_1767176504.jpg

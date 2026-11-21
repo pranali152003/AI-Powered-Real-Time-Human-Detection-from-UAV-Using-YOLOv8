@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alerts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="alert-container">
+
+    <h2>🚨 Alerts</h2>
+
+    <table class="alert-table">
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Humans</th>
+            <th>Snapshot</th>
+        </tr>
+
+        {% for row in rows %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>
+                {% if row|length == 5 %}
+                    <a href="/view_snapshot/{{ row[4] }}" class="view-btn">View</a>
+                {% else %}
+                    <a href="/view_snapshot/{{ row[3] }}" class="view-btn">View</a>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/" class="back-btn">⬅ Back</a>
+
+</div>
+
+</body>
+</html>

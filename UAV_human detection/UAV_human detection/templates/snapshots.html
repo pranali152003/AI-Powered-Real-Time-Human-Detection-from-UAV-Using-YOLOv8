@@ -1,0 +1,11 @@
+<h2>📸 All Snapshots</h2>
+
+<div class="gallery">
+{% for img in files %}
+    <a href="/snapshots/{{ img }}">
+        <img src="/snapshots/{{ img }}" width="300">
+    </a>
+{% endfor %}
+</div>
+
+<a href="/">⬅ Back</a>
