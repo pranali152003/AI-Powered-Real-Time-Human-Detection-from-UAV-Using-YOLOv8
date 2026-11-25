@@ -132,14 +132,6 @@ These results demonstrate the model's ability to detect humans in aerial images 
 
 ---
 
-
-## Training Performance Dashboard
- he integrated dashboard provides a centralized interface for real-time UAV-based human detection and monitoring. It displays the live video feed with YOLOv8-based detection results, highlights detected humans using bounding boxes, and generates alerts whenever human presence is detected.
-
- ![Real-Time Human Detection Dashboard](img/dashboard.png)
-
----
-
 ## 🖥️ Real-Time Detection Dashboard
 
 An integrated dashboard was developed for monitoring human detection events.he integrated dashboard provides a centralized interface for real-time UAV-based human detection and monitoring. It displays the live video feed with YOLOv8-based detection results, highlights detected humans using bounding boxes, and generates alerts whenever human presence is detected.
